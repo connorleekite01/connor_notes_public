@@ -10,5 +10,6 @@
 
     <ItemGroup>
         <ProjectReference Include="..\sampleTriangleUtils\sampleTriangleUtils.csproj" />
+        <ProjectReference Include="..\sampleCalculator\sampleCalculator.csproj" />
     </ItemGroup>
 </Project>
