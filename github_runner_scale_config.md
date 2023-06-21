@@ -15,7 +15,7 @@ helm install arc \
     --create-namespace \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
 
-INSTALLATION_NAME="arc-runner-set"
+INSTALLATION_NAME="arc-runners-set"
 GITHUB_CONFIG_URL="https://github.com/connorleekite01/actions-runner-controller"
 GITHUB_PAT="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"
 helm install "${INSTALLATION_NAME}" \
@@ -28,11 +28,11 @@ helm install "${INSTALLATION_NAME}" \
 
 ```
 INSTALLATION_NAME="arc"
-NAMESPACE="arc-runners"
+NAMESPACE="arc-systems"
 helm uninstall "${INSTALLATION_NAME}" --namespace "${NAMESPACE}"
 
 INSTALLATION_NAME="arc-runners-set"
-NAMESPACE="arc-runners"
+NAMESPACE="arc-systems"
 helm uninstall "${INSTALLATION_NAME}" --namespace "${NAMESPACE}"
 ```
 
@@ -42,5 +42,6 @@ docker ps
 ```
 
 ```bash
+NAMESPACE="arc-systems"
 helm list -n "${NAMESPACE}"
 ```
